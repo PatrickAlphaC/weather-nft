@@ -1,0 +1,25 @@
+{
+    "name": "weather_update",
+    "initiators": [
+        {
+            "type": "RunLog",
+            "params": {
+                "address": ""
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "type": "weather_cl_ea"
+        },
+        {
+            "type": "copy"
+        },
+        {
+            "type": "ethbytes32"
+        },
+        {
+            "type": "EthTx"
+        }
+    ]
+}

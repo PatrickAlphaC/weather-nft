@@ -1,0 +1,39 @@
+{
+  "name": "@chainlink/box",
+  "version": "0.6.0",
+  "description": "A Chainlink example in a Truffle box",
+  "scripts": {
+    "compile": "npx truffle compile",
+    "console:dev": "npx truffle console --network cldev",
+    "console:kovan": "npx truffle console --network kovan",
+    "depcheck": "echo '@chainlink/box' && depcheck --ignore-dirs=build/contracts || true",
+    "solhint": "solhint ./contracts/**/*.sol",
+    "lint": "yarn solhint",
+    "migrate:dev": "npx truffle migrate --reset --network cldev",
+    "migrate:kovan": "npx truffle migrate --network kovan",
+    "test": "npx truffle test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@chainlink/contracts": "^0.1.7",
+    "@openzeppelin/contracts": "^3.4.0",
+    "@truffle/hdwallet-provider": "1.0.40",
+    "dotenv": "^8.2.0",
+    "truffle-plugin-verify": "^0.5.8"
+  },
+  "devDependencies": {
+    "@chainlink/belt": "^0.0.3",
+    "@chainlink/test-helpers": "0.0.5",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "chai": "^4.3.0",
+    "depcheck": "^1.3.1",
+    "solhint": "^3.3.2",
+    "truffle": "^5.3.1"
+  },
+  "resolutions": {
+    "**/minimist": "^0.2.1",
+    "**/node-fetch": "^2.6.1",
+    "**/yargs-parser": "^13.1.2",
+    "**/mem": "^4.0.0"
+  }
+}
