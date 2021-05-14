@@ -9,7 +9,7 @@ module.exports = async (deployer, network, [defaultAccount]) => {
     if (!network.startsWith('rinkeby')) {
         console.log("Skipping...")
     }
-    let amount = networkConfig[deployer.network_id]["fee"]
+    let amount = networkConfig[deployer.network_id]["fundAmount"]
     const weatherFeed = await WeatherFeed.deployed()
     const weatherNFT = await WeatherNFT.deployed()
     if (deployer.network_id != 4447) {

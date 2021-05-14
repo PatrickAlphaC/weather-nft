@@ -18,4 +18,5 @@ module.exports = async (deployer, network, [defaultAccount]) => {
     await weatherNFT.approve(networkConfig[deployer.network_id]["oracle"], 2, { from: defaultAccount })
     await weatherNFT.approve(networkConfig[deployer.network_id]["oracle"], 3, { from: defaultAccount })
     console.log("View your NFTs on Opensea!")
+    console.log("https://opensea.io/assets/matic/" + weatherNFT.address + "/0")
 }

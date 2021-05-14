@@ -41,14 +41,14 @@ contract WeatherNFT is ERC721, Ownable, ChainlinkClient {
             setChainlinkToken(_link);
         }
         weatherFeedAddress = _weatherFeed;
-        weatherToWeatherURI["Thunderstorm"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
-        weatherToWeatherURI["Drizzle"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
-        weatherToWeatherURI["Rain"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
+        weatherToWeatherURI["Thunderstorm"] = "https://ipfs.io/ipfs/QmP3TpPig2St3nTwvi9TFAGdv6YTew5k4pmC1yFtaLwFFo";
+        weatherToWeatherURI["Drizzle"] = "https://ipfs.io/ipfs/QmP3TpPig2St3nTwvi9TFAGdv6YTew5k4pmC1yFtaLwFFo";
+        weatherToWeatherURI["Rain"] = "https://ipfs.io/ipfs/QmP3TpPig2St3nTwvi9TFAGdv6YTew5k4pmC1yFtaLwFFo";
         weatherToWeatherURI["Snow"] = "https://ipfs.io/ipfs/QmaeYdJ8EydzUGdGQGkPNkSBEQUmwRmAv2QWq1VTfsfrdk";
         weatherToWeatherURI["Atmosphere"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
         weatherToWeatherURI["Clear"] = "https://ipfs.io/ipfs/QmcKEV1xJQ3ZCyPsDPJHsuEZnF95hNZf8S3rBEvzCKwjof";
         weatherToWeatherURI["Clouds"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
-        overRide = true;
+        overRide = false;
         overRideTokenIdToWeatherURI[0] = weatherToWeatherURI["Rain"];
         overRideTokenIdToWeatherURI[1] = weatherToWeatherURI["Clear"];
         overRideTokenIdToWeatherURI[2] = weatherToWeatherURI["Clouds"];
@@ -63,12 +63,18 @@ contract WeatherNFT is ERC721, Ownable, ChainlinkClient {
         tokenCounter = tokenCounter + 1;
     }
 
-    function setOverRide(bool _overRide) public onlyOwner {
-        overRide = _overRide;
+    function setOverRide(uint256 _overRide) public onlyOwner {
+        if (_overRide == 0){
+            overRide = false;
+        }
+        if (_overRide == 1){
+            overRide = true;
+        }
     }
 
-    function setWeatherURI(string memory weather, string memory tokenUri) public onlyOwner {
+    function setWeatherURI(string memory weather, string memory tokenUri, uint256 tokenId) public onlyOwner {
         weatherToWeatherURI[weather] = tokenUri;
+        overRideTokenIdToWeatherURI[tokenId] = tokenUri;
     }
 
     function tokenURI(uint256 tokenId) public view override (ERC721) returns (string memory) {

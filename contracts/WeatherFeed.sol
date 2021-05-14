@@ -34,6 +34,7 @@ contract WeatherFeed is ChainlinkClient, Ownable {
     jobid = _jobid;
     oracle = _oracle;
     fee = _fee; 
+    weather = "Clear";
   }
 
   /**

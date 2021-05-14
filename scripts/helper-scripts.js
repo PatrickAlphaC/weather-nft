@@ -34,6 +34,7 @@ const networkConfig = {
         weatherJobId: '235f8b1eeb364efc83c26d0bef2d0c01',
         passwordJobId: '7dba1883480744b3a3a619aeb65b5d1f',
         fee: '100000000000000000',
+        fundAmount: '400000000000000000',
     },
     4447: {
         name: 'ganache',
@@ -45,10 +46,12 @@ const networkConfig = {
         weatherJobId: '235f8b1eeb364efc83c26d0bef2d0c01',
         passwordJobId: '7dba1883480744b3a3a619aeb65b5d1f',
         fee: '100000000000000000',
+        fundAmount: '400000000000000000',
     },
     31337: {
         name: 'localhost',
         fee: '100000000000000000',
+        fundAmount: '400000000000000000',
         keyHash: '0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4',
         jobId: '29fa9aa13bf1468788b7cc4a500a45b8'
     },
@@ -63,6 +66,7 @@ const networkConfig = {
         weatherJobId: '57682b003f754195b60292006f1c3206',
         passwordJobId: '7dba1883480744b3a3a619aeb65b5d1f',
         fee: '100000000000000000',
+        fundAmount: '400000000000000000',
     },
     4: {
         name: 'rinkeby',
@@ -75,6 +79,7 @@ const networkConfig = {
         // TODO
         passwordJobId: '',
         fee: '100000000000000000',
+        fundAmount: '400000000000000000',
     },
     1: {
         name: 'mainnet',
@@ -90,7 +95,9 @@ const networkConfig = {
         oracle: '0x0287bcf1dcbbf61b58766d69240c32d1ea13e920', // Alpha Chain Matic
         weatherJobId: '74873d17a942416586f812080c72fcdc',
         passwordJobId: '',
-        fee: '10000000000000000'
+        fee: '10000000000000000',
+        fundAmount: '40000000000000000'
+
     },
     80001: {
         name: 'mumbai',
@@ -98,7 +105,9 @@ const networkConfig = {
         oracle: '0x0287bcf1dcbbf61b58766d69240c32d1ea13e920', // Alpha Chain Matic
         weatherJobId: '74873d17a942416586f812080c72fcdc',
         passwordJobId: '',
-        fee: 10000000000000000
+        fee: 10000000000000000,
+        fundAmount: 40000000000000000,
+
     }
 }
 
