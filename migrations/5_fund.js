@@ -19,7 +19,7 @@ module.exports = async (deployer, network, [defaultAccount]) => {
         let tx = await token.transfer(weatherFeed.address, amount, { from: defaultAccount })
         console.log(tx.tx)
         console.log('Funding contract:', weatherNFT.address)
-        let tx2 = await token.transfer(weatherNFT.address, amount * 4, { from: defaultAccount })
+        let tx2 = await token.transfer(weatherNFT.address, amount, { from: defaultAccount })
         console.log(tx2.tx)
     }
 

@@ -6,8 +6,9 @@ module.exports = async callback => {
     // }
     console.log("Requesting...")
     const weatherNFT = await WeatherNFT.deployed()
-    const tx = await WeatherNFT.attemptPassword("FreeBe")
-    console.log(tx)
+    // const tx = await WeatherNFT.attemptPassword("FreeBe")
+    // console.log(tx)
+    console.log(weatherNFT)
     callback(tx.tx)
 }
 

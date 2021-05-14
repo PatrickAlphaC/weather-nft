@@ -39,6 +39,13 @@ module.exports = {
       network_id: '137',
       skipDryRun: true
     },
+    mumbai: {
+      provider: () => {
+        return new HDWalletProvider(private_key, 'https://matic-mumbai.chainstacklabs.com')
+      },
+      network_id: '80001',
+      skipDryRun: true
+    },
   },
   compilers: {
     solc: {

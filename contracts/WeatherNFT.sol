@@ -41,13 +41,13 @@ contract WeatherNFT is ERC721, Ownable, ChainlinkClient {
             setChainlinkToken(_link);
         }
         weatherFeedAddress = _weatherFeed;
-        weatherToWeatherURI["Thunderstorm"] = "https://ipfs.io/ipfs/QmTzyZDbthu6DNhfm9uruK2Ev4Sz3kj2ungAaJEGToQ1Ye?filename=rain-link.json";
-        weatherToWeatherURI["Drizzle"] = "https://ipfs.io/ipfs/QmTzyZDbthu6DNhfm9uruK2Ev4Sz3kj2ungAaJEGToQ1Ye?filename=rain-link.json";
-        weatherToWeatherURI["Rain"] = "https://ipfs.io/ipfs/QmTzyZDbthu6DNhfm9uruK2Ev4Sz3kj2ungAaJEGToQ1Ye?filename=rain-link.json";
-        weatherToWeatherURI["Snow"] = "https://ipfs.io/ipfs/QmTjHbBfY6iQRA5WwLh8sxz34tRE8JCUtLwWNggsKW4xiu?filename=snow-link.json";
-        weatherToWeatherURI["Atmosphere"] = "https://ipfs.io/ipfs/QmUQydHLHfqHKzysw4Xnx6bVmDXFvnUtnwkT52eBfqg2Vv?filename=cloud-link.json";
-        weatherToWeatherURI["Clear"] = "https://ipfs.io/ipfs/Qma76KhApSZymEgYdXzrvLqtTsPnsm56eDBzzBYU8ZZAc6?filename=sun-link.json";
-        weatherToWeatherURI["Clouds"] = "https://ipfs.io/ipfs/QmUQydHLHfqHKzysw4Xnx6bVmDXFvnUtnwkT52eBfqg2Vv?filename=cloud-link.json";
+        weatherToWeatherURI["Thunderstorm"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
+        weatherToWeatherURI["Drizzle"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
+        weatherToWeatherURI["Rain"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
+        weatherToWeatherURI["Snow"] = "https://ipfs.io/ipfs/QmaeYdJ8EydzUGdGQGkPNkSBEQUmwRmAv2QWq1VTfsfrdk";
+        weatherToWeatherURI["Atmosphere"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
+        weatherToWeatherURI["Clear"] = "https://ipfs.io/ipfs/QmcKEV1xJQ3ZCyPsDPJHsuEZnF95hNZf8S3rBEvzCKwjof";
+        weatherToWeatherURI["Clouds"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
         overRide = true;
         overRideTokenIdToWeatherURI[0] = weatherToWeatherURI["Rain"];
         overRideTokenIdToWeatherURI[1] = weatherToWeatherURI["Clear"];
