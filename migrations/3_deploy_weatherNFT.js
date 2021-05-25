@@ -1,5 +1,5 @@
 const WeatherFeed = artifacts.require('WeatherFeed')
-const WeatherNFT = artifacts.require('WeatherNFT')
+const Consensus2021ChainlinkWeatherNFT = artifacts.require('Consensus2021ChainlinkWeatherNFT')
 const { networkConfig } = require('../scripts/helper-scripts.js')
 
 module.exports = async (deployer, network, [defaultAccount]) => {
@@ -9,7 +9,7 @@ module.exports = async (deployer, network, [defaultAccount]) => {
         console.log("We can deploy stuff... but that's it!")
     }
     weatherFeed = await WeatherFeed.deployed()
-    tx1 = await deployer.deploy(WeatherNFT,
+    tx1 = await deployer.deploy(Consensus2021ChainlinkWeatherNFT,
         networkConfig[deployer.network_id]["linkToken"],
         WeatherFeed.address,
         networkConfig[deployer.network_id]["oracle"],

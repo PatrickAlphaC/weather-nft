@@ -76,10 +76,10 @@ const networkConfig = {
         vrfCoordinator: '0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B',
         oracle: '0x8927c312d29d1bbef7bde10e8e9a2fa257efe8c7',
         weatherJobId: 'd8c92142857640a891b9434c72eed1e2',
-        // TODO
-        passwordJobId: '',
         fee: '10000000000000000',
         fundAmount: '400000000000000000',
+        // TODO - not done VVV
+        passwordJobId: 'd8c92142857640a891b9434c72eed1e2',
     },
     1: {
         name: 'mainnet',

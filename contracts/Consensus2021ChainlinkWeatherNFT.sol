@@ -10,7 +10,7 @@ import "./interfaces/IWeatherFeed.sol";
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
-contract WeatherNFT is ERC721, Ownable, ChainlinkClient {
+contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
     using Strings for string;
     bool public overRide;
     string public overRideWeather;

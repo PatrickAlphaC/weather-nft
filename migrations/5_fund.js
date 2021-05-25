@@ -1,12 +1,12 @@
 const WeatherFeed = artifacts.require('WeatherFeed')
-const WeatherNFT = artifacts.require('WeatherNFT')
+const Consensus2021ChainlinkWeatherNFT = artifacts.require('Consensus2021ChainlinkWeatherNFT')
 const LinkTokenInterface = artifacts.require('LinkTokenInterface')
 const { networkConfig } = require('../scripts/helper-scripts.js')
 
 module.exports = async (deployer, network, [defaultAccount]) => {
     let amount = networkConfig[deployer.network_id]["fundAmount"]
     const weatherFeed = await WeatherFeed.deployed()
-    const weatherNFT = await WeatherNFT.deployed()
+    const weatherNFT = await Consensus2021ChainlinkWeatherNFT.deployed()
     if (deployer.network_id != 4447) {
         const tokenAddress = networkConfig[deployer.network_id]["linkToken"]
         const token = await LinkTokenInterface.at(tokenAddress)

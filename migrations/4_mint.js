@@ -1,5 +1,5 @@
 const WeatherFeed = artifacts.require('WeatherFeed')
-const WeatherNFT = artifacts.require('WeatherNFT')
+const Consensus2021ChainlinkWeatherNFT = artifacts.require('Consensus2021ChainlinkWeatherNFT')
 const { networkConfig } = require('../scripts/helper-scripts.js')
 
 module.exports = async (deployer, network, [defaultAccount]) => {
@@ -8,7 +8,7 @@ module.exports = async (deployer, network, [defaultAccount]) => {
     if (!network.startsWith('rinkeby')) {
         console.log("We can deploy stuff... but that's it!")
     }
-    weatherNFT = await WeatherNFT.deployed()
+    weatherNFT = await Consensus2021ChainlinkWeatherNFT.deployed()
     await weatherNFT.mintWeatherNFT({ from: defaultAccount })
     await weatherNFT.mintWeatherNFT({ from: defaultAccount })
     await weatherNFT.mintWeatherNFT({ from: defaultAccount })
