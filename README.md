@@ -33,12 +33,15 @@ cd weather-nft
 yarn
 ```
 
+sdfasdfasf
 3. Deploy
 
 ```
 truffle migrate --network XXXX
 ```
+
 ### Verify
+
 
 ```
 yarn add truffle-plugin-verify

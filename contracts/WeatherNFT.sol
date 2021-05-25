@@ -27,11 +27,7 @@ contract WeatherNFT is ERC721, Ownable, ChainlinkClient {
     mapping(uint256 => string) public overRideTokenIdToWeatherURI;
     mapping(uint256 => bool) public tokenIdTaken;
     event attemptedPassword(bytes32 requestId);
-    /**
-     * Constructor inherits VRFConsumerBase
-     * Network: Rinkeby
-     * LINK token address:                0x01BE23585060835E02B77ef475b0Cc51aA1e0709
-     */
+
     constructor(address _link, address _weatherFeed, address _oracle, bytes32 _jobId, uint256 _fee) public
         ERC721("WeatherNFT", "wNFT")
     {   

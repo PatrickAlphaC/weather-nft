@@ -4,11 +4,6 @@ const LinkTokenInterface = artifacts.require('LinkTokenInterface')
 const { networkConfig } = require('../scripts/helper-scripts.js')
 
 module.exports = async (deployer, network, [defaultAccount]) => {
-    // Local (development) networks need their own deployment of the LINK
-    // token and the Oracle contract
-    if (!network.startsWith('rinkeby')) {
-        console.log("Skipping...")
-    }
     let amount = networkConfig[deployer.network_id]["fundAmount"]
     const weatherFeed = await WeatherFeed.deployed()
     const weatherNFT = await WeatherNFT.deployed()

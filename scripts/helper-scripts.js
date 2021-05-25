@@ -78,7 +78,7 @@ const networkConfig = {
         weatherJobId: 'd8c92142857640a891b9434c72eed1e2',
         // TODO
         passwordJobId: '',
-        fee: '100000000000000000',
+        fee: '10000000000000000',
         fundAmount: '400000000000000000',
     },
     1: {
@@ -92,9 +92,9 @@ const networkConfig = {
     137: {
         name: 'matic',
         linkToken: '0xb0897686c545045afc77cf20ec7a532e3120e0f1',
-        oracle: '0x0287bcf1dcbbf61b58766d69240c32d1ea13e920', // Alpha Chain Matic
-        weatherJobId: '74873d17a942416586f812080c72fcdc',
-        passwordJobId: '',
+        oracle: '0xce0bbe138dfd3a77bfafb5e4f71364c375d1726a', // Alpha Chain Matic
+        weatherJobId: 'b577b21e91154a36bd216a8762e4bd76',
+        passwordJobId: 'b210d5e836bb4c5faa6de7aa88c9be2c',
         fee: '10000000000000000',
         fundAmount: '40000000000000000'
 
@@ -102,7 +102,7 @@ const networkConfig = {
     80001: {
         name: 'mumbai',
         linkToken: '0xb0897686c545045afc77cf20ec7a532e3120e0f1',
-        oracle: '0x0287bcf1dcbbf61b58766d69240c32d1ea13e920', // Alpha Chain Matic
+        oracle: '',
         weatherJobId: '74873d17a942416586f812080c72fcdc',
         passwordJobId: '',
         fee: 10000000000000000,
