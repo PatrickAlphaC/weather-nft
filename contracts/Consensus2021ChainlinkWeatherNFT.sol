@@ -29,7 +29,7 @@ contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
     event attemptedPassword(bytes32 requestId);
 
     constructor(address _link, address _weatherFeed, address _oracle, bytes32 _jobId, uint256 _fee) public
-        ERC721("WeatherNFT", "wNFT")
+        ERC721("Consensus2021ChainlinkWeatherNFT", "wNFT")
     {   
         if (_link == address(0)) {
             setPublicChainlinkToken();
@@ -44,7 +44,7 @@ contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
         weatherToWeatherURI["Atmosphere"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
         weatherToWeatherURI["Clear"] = "https://ipfs.io/ipfs/QmcKEV1xJQ3ZCyPsDPJHsuEZnF95hNZf8S3rBEvzCKwjof";
         weatherToWeatherURI["Clouds"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
-        overRide = false;
+        overRide = true;
         overRideTokenIdToWeatherURI[0] = weatherToWeatherURI["Rain"];
         overRideTokenIdToWeatherURI[1] = weatherToWeatherURI["Clear"];
         overRideTokenIdToWeatherURI[2] = weatherToWeatherURI["Clouds"];
@@ -95,21 +95,24 @@ contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
 
     function fulfill(bytes32 _requestId, uint256 _data) public recordChainlinkFulfillment(_requestId)
     {   
-        require(tokenIdTaken[0] == false, "This token is taken!");
         response = _data;
         if(response == 0){
-            safeTransferFrom(ownerOf(0), requestIdToAttemptee[_requestId], 1);
+            require(tokenIdTaken[0] == false, "This token is taken!");
+            safeTransferFrom(ownerOf(0), requestIdToAttemptee[_requestId], 0);
             tokenIdTaken[0] = true; 
         }
         if (response == 1){
+                require(tokenIdTaken[1] == false, "This token is taken!");
                 safeTransferFrom(ownerOf(1), requestIdToAttemptee[_requestId], 1);
                 tokenIdTaken[1] = true; 
         }
         if (response == 2){
+                require(tokenIdTaken[2] == false, "This token is taken!");
                 safeTransferFrom(ownerOf(2), requestIdToAttemptee[_requestId], 2);
                 tokenIdTaken[2] = true; 
         }
         if (response == 3){
+                require(tokenIdTaken[3] == false, "This token is taken!");
                 safeTransferFrom(ownerOf(3), requestIdToAttemptee[_requestId], 3);
                 tokenIdTaken[3] = true; 
         }
